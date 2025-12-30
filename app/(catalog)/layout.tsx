@@ -1,5 +1,6 @@
 import FilterSwitcher from '@/components/FilterSwitcher/FilterSwitcher';
 import styles from './layout.module.css';
+import { Suspense } from 'react';
 
 export default function CatalogLayout({
   children,
@@ -9,7 +10,9 @@ export default function CatalogLayout({
   return (
     <div className={styles.wrapper}>
       <aside className={styles.sidebar}>
-        <FilterSwitcher />
+        <Suspense fallback={<div>Loading filters...</div>}>
+          <FilterSwitcher />
+        </Suspense>
       </aside>
 
       <main className={styles.content}>

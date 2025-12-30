@@ -26,6 +26,9 @@ export default async function Home({ searchParams }: Props) {
   const species = params.species || "";
 
   const data = await getCharacters(currentPage, name, status, gender, species);
+  if (!data || !data.results) {
+    return <div>Characters not found</div>;
+  }
 
   return (
     <main>
