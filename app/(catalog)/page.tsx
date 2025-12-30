@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Character } from "@/types/character";
 import Search from "@/components/Search/Search";
 import { Suspense } from "react";
+export const dynamic = 'force-dynamic';
 
 type Props = {
   searchParams: Promise<{
