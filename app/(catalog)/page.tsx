@@ -5,6 +5,7 @@ import { getCharacters } from "@/lib/api/characters";
 import Link from "next/link";
 import { Character } from "@/types/character";
 import Search from "@/components/Search/Search";
+import { Suspense } from "react";
 export const dynamic = 'force-dynamic';
 
 type Props = {
@@ -34,7 +35,10 @@ export default async function Home({ searchParams }: Props) {
   return (
     <main>
       <h1>Characters</h1>
+
+      <Suspense fallback={<div style={{height: 44}} aria-hidden="true" />}>
         <Search />
+      </Suspense>
 
       <Grid>
         {data.results.map((char: Character) => (
@@ -46,7 +50,7 @@ export default async function Home({ searchParams }: Props) {
         ))}
       </Grid>
 
-        <Pagination totalPages={data.info.pages} />
+      <Pagination totalPages={data.info.pages} />
     </main>
   );
 }
