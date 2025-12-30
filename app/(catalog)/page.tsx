@@ -5,6 +5,7 @@ import { getCharacters } from "@/lib/api/characters";
 import Link from "next/link";
 import { Character } from "@/types/character";
 import Search from "@/components/Search/Search";
+import { Suspense } from "react";
 
 type Props = {
   searchParams: Promise<{
@@ -33,9 +34,10 @@ export default async function Home({ searchParams }: Props) {
   return (
     <main>
       <h1>Characters</h1>
+      <Suspense fallback={<div>Loading search...</div>}>
+        <Search />
+      </Suspense>
 
-      <Search />
-      
       <Grid>
         {data.results.map((char: Character) => (
           <li key={char.id}>
