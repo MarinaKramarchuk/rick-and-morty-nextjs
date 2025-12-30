@@ -1,0 +1,84 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--card-border);
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 30px;
+  color: var(--foreground);
+}
+
+.info h1 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  color: var(--accent-green);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.details p {
+  font-size: 18px;
+  margin: 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.details strong {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row; 
+    align-items: stretch;
+    max-width: 900px;
+    min-height: 450px;
+  }
+
+  .imageBox {
+    flex: 1 0 450px;
+    max-width: 50%;
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 40px; 
+  }
+}

@@ -1,0 +1,77 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  transition: var(--transition);
+  overflow: hidden; 
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-green);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px; 
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff; 
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alive {
+  background-color: var(--status-alive);
+}
+
+.dead {
+  background-color: var(--status-dead);
+}
+
+.unknown {
+  background-color: var(--status-unknown);
+}
+
+.content {
+  padding: var(--space-md);
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--foreground);
+}
+
+.location_header {
+  font-size: 14px;
+  color: var(--text-muted); 
+  margin-bottom: 4px;
+  display: block;
+}
+
+.location {
+  font-size: 16px;
+  color: var(--foreground);
+}

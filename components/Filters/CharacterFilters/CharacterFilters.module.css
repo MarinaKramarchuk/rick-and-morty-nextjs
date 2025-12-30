@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.select {
+  width: 100%;
+  height: 42px;
+  padding: 0 var(--space-md);
+  padding-right: 35px;
+  
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  
+  font-size: 15px;
+  cursor: pointer;
+  appearance: none;
+  
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  
+  transition: var(--transition);
+  outline: none;
+}
+
+.select:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.select option {
+  background-color: var(--card-bg);
+  color: var(--foreground);
+}
+
+.reset_button {
+  margin-top: var(--space-md);
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--status-dead);
+  color: var(--status-dead);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.reset_button:hover {
+  background: var(--status-dead);
+  color: white;
+}
