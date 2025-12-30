@@ -48,7 +48,9 @@ export default async function Home({ searchParams }: Props) {
         ))}
       </Grid>
 
-      <Pagination totalPages={data.info.pages} />
+      <Suspense key="pagination-suspense" fallback={null}>
+        <Pagination totalPages={data.info.pages} />
+      </Suspense>
     </main>
   );
 }
