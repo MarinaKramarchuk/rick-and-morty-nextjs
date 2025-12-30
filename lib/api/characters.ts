@@ -16,7 +16,7 @@ export async function getCharacters(
   try {
     const res = await fetch(
       `https://rickandmortyapi.com/api/character?${query.toString()}`,
-      { cache: 'no-store' }
+      { next: { revalidate: 3600 } }
     );
 
     if (!res.ok) {
@@ -35,7 +35,7 @@ export async function getCharacterById(id: string) {
 
   try {
     const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`, {
-      cache: 'no-store'
+      next: { revalidate: 3600 }
     });
 
     if (!res.ok) {

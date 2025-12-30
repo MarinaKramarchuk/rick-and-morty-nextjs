@@ -4,7 +4,7 @@ export async function getLocationById(id: string) {
 
   try {
     const res = await fetch(`https://rickandmortyapi.com/api/location/${id}`, {
-      cache: 'no-store'
+      next: { revalidate: 3600 }
     });
 
     if (!res.ok) {

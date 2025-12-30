@@ -4,7 +4,7 @@ export async function getEpisodeById(id: string) {
 
   try {
     const res = await fetch(`https://rickandmortyapi.com/api/episode/${id}`, {
-      cache: 'no-store'
+      next: { revalidate: 3600 }
     });
 
     if (!res.ok) {
