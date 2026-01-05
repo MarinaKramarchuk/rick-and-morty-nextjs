@@ -28,7 +28,7 @@ export default function Navbar() {
 
 
       <ul className={`${styles.navLinks} ${open ? styles.open : ''}`}>
-        <li>
+        <li className={styles.navLink}>
           <Link 
             href="/" 
             onClick={() => setOpen(false)}
@@ -36,7 +36,7 @@ export default function Navbar() {
           >Characters
           </Link>
         </li>
-        <li>
+        <li className={styles.navLink}>
           <Link 
             href="/episodes" 
             onClick={() => setOpen(false)}
@@ -44,7 +44,7 @@ export default function Navbar() {
           >Episodes
           </Link>
         </li>
-        <li>
+        <li className={styles.navLink}>
           <Link 
             href="/locations" 
             onClick={() => setOpen(false)}
