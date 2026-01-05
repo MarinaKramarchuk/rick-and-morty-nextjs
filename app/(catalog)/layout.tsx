@@ -16,7 +16,9 @@ export default function CatalogLayout({
       </aside>
 
       <main className={styles.content}>
-        {children}
+        <Suspense fallback={<div>Loading content...</div>}>
+          {children}
+        </Suspense>
       </main>
     </div>
   );
