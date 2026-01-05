@@ -4,13 +4,19 @@ All rights to the original content belong to Adult Swim.
 
 # 🛸 Rick and Morty Explorer (Next.js 15)
 
+[![Deployment Status](https://img.shields.io/badge/Vercel-Deployed-success?style=flat&logo=vercel)](https://rick-and-morty-nextjs-pink.vercel.app/)
+[![Next.js Version](https://img.shields.io/badge/Next.js-15.1.9-black?style=flat&logo=next.js)](https://nextjs.org/)
+
 A modern, high-performance web application for exploring the "Rick and Morty" universe. Built with **Next.js 15**, **TypeScript**, and **CSS Modules**, featuring server-side data fetching and a mobile-first design.
 
+## 🔗 Live Demo
+**Explore the universe here:** [https://rick-and-morty-nextjs-pink.vercel.app/](https://rick-and-morty-nextjs-pink.vercel.app/)
 
+---
 
 ## ✨ Features
 
-* **⚡ Next.js 15 Performance**: Optimized with Server Components and advanced caching (`revalidate`).
+* **⚡ Next.js 15 Performance**: Optimized with Server Components and advanced caching.
 * **🧬 Character Catalog**: Browse characters with detailed info and dynamic filtering by status, gender, and species.
 * **🎬 Episodes & Locations**: Dedicated pages for episodes and locations showing all characters involved in each.
 * **📱 Mobile-First Design**: Fully responsive UI that works perfectly on smartphones, tablets, and desktops.
@@ -56,4 +62,4 @@ A modern, high-performance web application for exploring the "Rick and Morty" un
 - **Sticky Sidebar**: Implemented a desktop-only sticky sidebar for a better UX when browsing long lists.
 
 ---
-Created with ❤️ by Marina.
+Created with ❤️ by [Marina](https://github.com/MarinaKramarchuk).
