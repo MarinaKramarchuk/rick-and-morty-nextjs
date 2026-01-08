@@ -8,6 +8,7 @@
 
   /* MOBILE FIRST */
   grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
 }
 
 /* TABLET */
